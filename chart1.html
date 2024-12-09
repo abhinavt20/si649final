@@ -1,4 +1,4 @@
-<!-- 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,39 +15,4 @@
 </script>
 </body>
 </html>
- -->
 
- <!DOCTYPE html>
-<html>
-<head>
-  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-  <style>
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-      background-color: #f4f4f4; /* Optional: Add a background color */
-    }
-    .vega-visualization {
-      text-align: center;
-      max-width: 90%;
-      padding: 20px;
-      background: white; /* Optional: Background for contrast */
-      border-radius: 8px; /* Optional: Rounded corners */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
-    }
-  </style>
-</head>
-<body>
-  <div class="vega-visualization" id="vega-visualization-f7183d8441eb4ef0adfddd509f0ef83c"></div>
-  <script type="text/javascript">
-    const spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-a355713425c7b96895a1bedd5df59cf2"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "Candidate", "scale": {"domain": ["Biden", "Trump"], "range": ["blue", "red"]}, "type": "nominal"}, "tooltip": [{"field": "Demographic", "type": "nominal"}, {"field": "Candidate", "type": "nominal"}, {"field": "Vote Percentage", "type": "quantitative"}], "x": {"axis": {"labelAngle": 0}, "field": "Demographic", "sort": null, "title": "Demographic", "type": "nominal"}, "xOffset": {"field": "Candidate", "title": null, "type": "nominal"}, "y": {"field": "Vote Percentage", "title": "Vote Percentage", "type": "quantitative"}}, "height": 400, "params": [{"name": "CategorySelection", "bind": {"input": "select", "options": ["Gender", "Race and ethnicity", "Gender and race", "Party", "Party/lean", "Party/lean and ideology", "Marital status", "Gender and Marital", "Age (four-way)", "Age (six-way)", "Age (four-way alt)", "Age (two-way)", "Community type (self-reported)", "Community type among White voters**", "Community type by gender", "Religious affiliation", "Religious tradition", "Religious attendance", "Education", "Education (two-way)", "Race and education", "Income", "Veteran (self)", "Veteran (self or household)", "Mode of voting", "Gender and education", "Gender and education among White voters", "Age, race and ethnicity", "Gender and age"], "name": "Select Category: "}, "value": "Gender"}], "title": "Voting Breakdown by Demographic", "transform": [{"filter": "(datum.Category === CategorySelection)"}], "width": 800, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-a355713425c7b96895a1bedd5df59cf2": [{"Demographic": "Men", "Candidate": "Biden", "Vote Percentage": 48, "Category": "Gender"}, {"Demographic": "Men", "Candidate": "Trump", "Vote Percentage": 50, "Category": "Gender"}, {"Demographic": "Women", "Candidate": "Biden", "Vote Percentage": 55, "Category": "Gender"}, {"Demographic": "Women", "Candidate": "Trump", "Vote Percentage": 44, "Category": "Gender"}]}};
-    const embedOpt = {};
-    vegaEmbed('#vega-visualization-f7183d8441eb4ef0adfddd509f0ef83c', spec, embedOpt).catch(console.error);
-  </script>
-</body>
-</html>
